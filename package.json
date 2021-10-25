@@ -19,14 +19,12 @@
     "url": "https://github.com/ccinetto/clase33/issues"
   },
   "homepage": "https://github.com/ccinetto/clase33#readme",
-  "devDependencies": {
+  "dependencies": {
     "@types/express": "^4.17.13",
     "@types/minimist": "^1.2.2",
     "@types/node": "^16.11.1",
     "nodemon": "^2.0.12",
-    "ts-node": "^10.2.1"
-  },
-  "dependencies": {
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
