@@ -4,7 +4,7 @@ import os from 'os';
 import Server from './services/server';
 
 const argumentos = minimist(process.argv.slice(2));
-export const PORT = argumentos.puerto || 8080;
+export const PORT = process.env.PORT || 8080;
 
 const clusterMode = argumentos.cluster;
 //Obtengo el numero de nucleos disponibles en mi PC
