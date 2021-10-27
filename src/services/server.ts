@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   console.log('Resolving / endpoint');
   res.json({
     pid: process.pid,
-    msg: `HOLA desde puerto ${PORT}`,
+    msg: `HOLA desde puerto ${PORT} y process id ${process.pid}`,
   });
 });
 
@@ -18,6 +18,21 @@ app.get('/prime', (req, res) => {
     if (isPrime(i)) primes.push(i);
   }
   res.json(primes);
+});
+
+app.get('/saludar', (req, res) => {
+  const primes = [];
+  const max = Number(req.query.max) || 1000;
+  for (let i = 1; i <= max; i++) {
+    if (isPrime(i)) primes.push(i);
+  }
+  res.json(primes);
+
+  res.json({
+    pid: process.pid,
+    msg: `HOLA desde puerto ${PORT} y process id ${process.pid}`,
+    primes,
+  });
 });
 
 export default app;
