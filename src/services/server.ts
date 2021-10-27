@@ -26,7 +26,6 @@ app.get('/saludar', (req, res) => {
   for (let i = 1; i <= max; i++) {
     if (isPrime(i)) primes.push(i);
   }
-  res.json(primes);
 
   res.json({
     pid: process.pid,
