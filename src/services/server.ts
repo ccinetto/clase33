@@ -30,7 +30,7 @@ app.get('/saludar', (req, res) => {
   res.json({
     pid: process.pid,
     msg: `HOLA desde puerto ${PORT} y process id ${process.pid}`,
-    primes,
+    variable: process.env.ENV_EJEMPLO,
   });
 });
 
